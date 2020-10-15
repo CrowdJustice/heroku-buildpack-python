@@ -105,7 +105,7 @@ testPython3_6() {
 
 testPython3_6_warn() {
   compile "python3_6_warn"
-  assertCaptured "Installing python-3.6.11"
+  assertCaptured "Installing python-3.6.12"
   assertCaptured "security update!"
   assertCaptured "${LATEST_36}"
   assertCapturedSuccess
@@ -232,7 +232,7 @@ testPypy2_7_warn() {
 testStickyPythonVersion() {
   local cache_dir="$(mktmpdir)"
   compile "python3_6_warn" "$cache_dir"
-  assertCaptured "Installing python-3.6.11"
+  assertCaptured "Installing python-3.6.12"
   assertCapturedSuccess
   compile "python_version_unspecified" "$cache_dir"
   assertNotCaptured "Installing python"
@@ -241,16 +241,16 @@ testStickyPythonVersion() {
   # Whilst this file seems like an implementation detail (so something that should
   # not be tested), we must guarantee the filename remains consistent for backwards
   # compatibility across buildpack versions for already-built apps.
-  assertFile "python-3.6.11" ".heroku/python-version"
+  assertFile "python-3.6.12" ".heroku/python-version"
 }
 
 testPythonVersionChange() {
   local cache_dir="$(mktmpdir)"
   compile "python3_6_warn" "$cache_dir"
-  assertCaptured "Installing python-3.6.11"
+  assertCaptured "Installing python-3.6.12"
   assertCapturedSuccess
   compile "python3_6" "$cache_dir"
-  assertCaptured "Found python-3.6.11, removing"
+  assertCaptured "Found python-3.6.12, removing"
   assertCapturedSuccess
 }
 

@@ -35,7 +35,7 @@
 ## v177 (2020-08-18)
 
 - Python 3.6.12 and 3.7.9 are now available (CPython) (#1054).
-- The default Python version for new apps is now 3.6.12 (previously 3.6.11) (#1054).
+- The default Python version for new apps is now 3.6.12 (previously 3.6.12) (#1054).
 
 ## v176 (2020-08-12)
 
@@ -73,7 +73,7 @@
 
 ## v171 (2020-07-07)
 
-- Python 3.6.11 and 3.7.8 are now available (CPython).
+- Python 3.6.12 and 3.7.8 are now available (CPython).
 
 ## v170 (2020-05-19)
 
